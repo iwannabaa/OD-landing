@@ -192,7 +192,7 @@ body {
   }
 
   h3 {
-    font-weight: bold;
+    font-weight: 600;
     margin-bottom: 5px;
   }
 
@@ -208,6 +208,22 @@ body {
     &:hover {
       background-color: darken($button-color, 5%);
     }
+  }
+}
+
+/* ----------------------------------------- */
+/* SPECIALS
+/* ----------------------------------------- */
+
+.section-specials {
+  
+  h2 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 24px;
+    padding: 15px 20px;
+    background: linear-gradient( 0deg, #f7f7f7, #fdfdfd, #fff ) #fff;
+    border-bottom: 1px solid #e5e5e5;
   }
 }
 
