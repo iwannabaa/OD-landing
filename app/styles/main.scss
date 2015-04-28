@@ -1,0 +1,227 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+$highlight-color: #d82204;
+$button-color   : #0083D2;
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* ----------------------------------------- */
+/* HEADER
+/* ----------------------------------------- */
+
+.header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: linear-gradient( 0deg, #f7f7f7, #fdfdfd, #fff ) #fff;
+  border-bottom: 1px solid #e5e5e5;
+  box-shadow: 0 1px 0 0 #dadada;
+
+  .logo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+
+  .top-nav {
+    color: #000;
+    font-size: 12px;
+
+    .item-highlighted {
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $highlight-color;
+    }
+
+    .nav > li:after {
+      content: "|";
+      color: #000;
+      position: absolute;
+      top: 5px;
+      right: -3px;
+    }
+
+    .nav > li:last-child:after {
+      content: "";
+    }
+
+    .nav > li > a {
+      color: inherit;
+      padding: 5px 10px;
+
+      &:hover {
+        background: none;
+      }
+    }
+  }
+
+  .search-input {
+    border-radius: 7px;
+    border: 1px solid #cdcdcd;
+    padding: 12px 25px;
+    margin-top: 20px;
+    width: 100%;
+    background: url("../images/icon-search.png") 98% center no-repeat;
+  }
+
+  .visual-nav {
+    margin-top: 20px;
+    color: #3C3D41;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: bold;
+
+    .nav .item-stores {
+      background: url("../images/icon-stores.png") no-repeat left center;
+      padding-left: 10px;
+    }
+
+    .nav .item-cart {
+      background: url("../images/icon-cart.png") no-repeat left center;
+      padding-left: 15px;
+    }
+
+    .nav .badge {
+      background-color: $highlight-color;
+    }
+
+    .nav > li > a {
+      color: inherit;
+
+      &:hover {
+        background: none;
+      }
+    }
+  }
+
+  .main-nav {
+    text-transform: uppercase;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+
+    .nav > li {
+      background: url("../images/nav-bg.gif") no-repeat right center;
+      display: inline-block;
+      float: none;
+    }
+
+    .nav > li:last-child {
+      background: none;
+    }
+
+    .nav > li + li {
+      margin-left: 0;
+    }
+
+    .nav > li > a {
+      padding: 5px 14px 5px 10px;
+      color: inherit;
+
+      &:hover {
+        background: none;
+      }
+    }
+  }
+}
+
+/* ----------------------------------------- */
+/* SLIDER
+/* ----------------------------------------- */
+
+.featured-slider {
+  border-bottom: 5px solid #f1f1f1;
+
+  .carousel {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 50px;
+
+    .item img {
+      margin: 0 auto;
+    }
+  }
+
+  .carousel-indicators {
+    bottom: 0;
+
+    li {
+      background-color: #a5a5a5;
+      border: none;
+      width: 14px;
+      height: 14px;
+
+      &.active {
+        background: url("../images/carousel-active.jpg");
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}
+
+/* ----------------------------------------- */
+/* SHOP NOW
+/* ----------------------------------------- */
+
+.section-shop {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  .shop-img {
+    max-width: 100%;
+  }
+
+  h3 {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .btn-shop {
+    color: #fff;
+    background-color: $button-color;
+    border: none;
+
+    &:hover {
+      background-color: darken($button-color, 5%);
+    }
+  }
+}
+
+/* ----------------------------------------- */
+/* FOOTER
+/* ----------------------------------------- */
+
+.footer {
+  color: #7F858B;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  background-color: #f1f1f1;
+
+  .print {
+    font-size: 11px;
+  }
+}
