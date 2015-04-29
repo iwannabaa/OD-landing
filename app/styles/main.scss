@@ -34,6 +34,7 @@ body {
   background: linear-gradient( 0deg, #f7f7f7, #fdfdfd, #fff ) #fff;
   border-bottom: 1px solid #e5e5e5;
   box-shadow: 0 1px 0 0 #dadada;
+  margin-bottom: 1px;
 
   .logo {
     margin-top: 20px;
@@ -432,12 +433,27 @@ body {
 .content-wrapper {
   width: 80%;
   float: left;
+  background: #fff;
 }
 .sidebar-wrapper {
   width: 20%;
-  float: left;
-  padding-left: 10px;
-  padding-right: 10px;
+  margin-left: 80%;
+  position: absolute;
+  //padding-left: 10px;
+  //padding-right: 10px;
+
+  .sidebar-tmp {
+    max-width: 100%;
+  }
+
+  .close-sidebar {
+    width: 55px;
+    height: 52px;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    background: url("../images/close-sidebar.jpg");
+  }
 
   .section {
     border-top: 1px solid #a2a2a2;
@@ -472,5 +488,20 @@ body {
     .phone {
       font-size: 16px;
     }
+  }
+}
+
+.container {
+  @media (min-width: 768px) {
+    width: auto;
+    max-width: 750px; 
+  }
+  @media (min-width: 992px) {
+    width: auto;
+    max-width: 970px; 
+  }
+  @media (min-width: 1200px) {
+    width: auto;
+    max-width: 1170px; 
   }
 }
