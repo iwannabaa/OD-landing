@@ -216,6 +216,7 @@ body {
 /* ----------------------------------------- */
 
 .section-specials {
+  padding-bottom: 20px;
   
   h2 {
     text-transform: uppercase;
@@ -224,6 +225,177 @@ body {
     padding: 15px 20px;
     background: linear-gradient( 0deg, #f7f7f7, #fdfdfd, #fff ) #fff;
     border-bottom: 1px solid #e5e5e5;
+  }
+
+  .special-img {
+    max-width: 100%;
+  }
+
+  .current-price {
+    font-weight: normal;
+    font-size: 40px;
+    color: $highlight-color;
+    margin: 0;
+
+    strong {
+      font-weight: normal;
+    }
+
+    span {
+      vertical-align: super;
+      font-size: 18px;
+    }
+  }
+
+  .list-price {
+    color: #a1a4a8;
+    text-align: right;
+    margin-bottom: 5px;
+  }
+
+  .price-text {
+    color: #5b9ad9;
+    font-size: 16px;
+  }
+
+  .special-info {
+    color: #777;
+  }
+
+  .product-name {
+    font-size: 18px;
+    margin-top: 5px;
+  }
+
+  .reviews {
+    img {
+      vertical-align: bottom;
+    }
+
+    .reviews-count {
+      color: #5b9ad9;
+      margin-left: 10px;
+    }
+  }
+}
+
+/* ----------------------------------------- */
+/* NEWS
+/* ----------------------------------------- */
+
+.section-news {
+  padding-bottom: 20px;
+  
+  h2 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 24px;
+    padding: 15px 20px;
+    background: linear-gradient( 0deg, #f7f7f7, #fdfdfd, #fff ) #fff;
+    border-bottom: 1px solid #e5e5e5;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  h4 {
+    color: #646465;
+  }
+}
+
+/* ----------------------------------------- */
+/* USER PRODUCTS MENU
+/* ----------------------------------------- */
+
+.section-user-products {
+  margin-top: 20px;
+  border-top: 1px solid #959595;
+  border-bottom: 1px solid #959595;
+
+  .user-product-menu {
+    color: #959595;
+
+    .nav > li.active > a {
+      color: #fff;
+      background-color: #959595;
+    }
+
+    .nav > li.active > a:hover {
+      background-color: #959595;
+    }
+
+    .nav > li > a {
+      color: inherit;
+      font-weight: 600;
+      border-radius: 0;
+      padding: 12px 15px;
+
+      &:hover {
+        background: none;
+      }
+    }
+  }
+
+  &.active .toggle-content {
+    background-position: center -40px;
+  }
+
+  .toggle-content {
+    position: absolute;
+    display: block;
+    height: 40px;
+    width: 40px;
+    right: 20px;
+    top: 0;
+    background: url("../images/toggle-icon.jpg") no-repeat;
+  }
+  
+  &.active .content {
+   max-height: 500px;
+   margin-top: 20px;
+   margin-bottom: 15px;  
+  }
+
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .1s ease;
+
+    img {
+      max-width: 100%;
+    }
+
+    h5 {
+      font-size: 11px;
+      font-weight: bold;
+      float: left;
+    }
+
+    .current-price {
+      font-weight: normal;
+      font-size: 24px;
+      color: $highlight-color;
+      margin: 0;
+
+      span {
+        vertical-align: super;
+        font-size: 12px;
+      }
+    }
+
+    .reviews {
+    img {
+      vertical-align: bottom;
+    }
+
+    .reviews-count {
+      color: #5b9ad9;
+      margin-left: 10px;
+    }
+  }
   }
 }
 
@@ -237,7 +409,68 @@ body {
   padding-top: 20px;
   background-color: #f1f1f1;
 
+  .footer-img {
+    max-width: 100%;
+  }
+
   .print {
     font-size: 11px;
+  }
+}
+
+.main-wrapper {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+.content-wrapper {
+  width: 80%;
+  float: left;
+}
+.sidebar-wrapper {
+  width: 20%;
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  .section {
+    border-top: 1px solid #a2a2a2;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+
+  .section-title {
+    font-size: 20px;
+    margin-top: 15px;
+    color: #000;
+  }
+
+  .section-user .section-title {
+    color: $highlight-color;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .section-store {
+    color: #8d9196;
+
+    .store-image img {
+      max-width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .phone {
+      font-size: 16px;
+    }
   }
 }
