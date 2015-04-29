@@ -74,12 +74,18 @@ body {
     }
   }
 
+  .search-input.office-open {
+    max-width: 75%;
+  }
   .search-input {
+    transition: max-width .4s ease;
+    float: left;
     border-radius: 7px;
     border: 1px solid #cdcdcd;
     padding: 12px 25px;
     margin-top: 20px;
     width: 100%;
+    max-width: 60%;
     background: url("../images/icon-search.png") 98% center no-repeat;
   }
 
@@ -90,6 +96,8 @@ body {
     letter-spacing: 3px;
     font-size: 13px;
     font-weight: bold;
+    float: left;
+    margin-left: 20px;
 
     .nav .item-stores {
       background: url("../images/icon-stores.png") no-repeat left center;
@@ -99,6 +107,14 @@ body {
     .nav .item-cart {
       background: url("../images/icon-cart.png") no-repeat left center;
       padding-left: 15px;
+    }
+    .nav .item-office {
+      opacity: 0;
+      display: none;
+    }
+
+    .nav .item-office a {
+      padding: 0;
     }
 
     .nav .badge {
@@ -151,6 +167,7 @@ body {
 
 .featured-slider {
   border-bottom: 5px solid #f1f1f1;
+  padding-bottom: 20px;
 
   .carousel {
     text-align: center;
@@ -187,6 +204,7 @@ body {
 .section-shop {
   padding-top: 20px;
   padding-bottom: 20px;
+  margin-top: 20px;
 
   .shop-img {
     max-width: 100%;
@@ -217,7 +235,38 @@ body {
 /* ----------------------------------------- */
 
 .section-specials {
-  padding-bottom: 20px;
+  margin-top: 20px;
+
+  .products-slider {
+    padding-bottom: 40px;
+
+    .carousel {
+      text-align: center;
+      padding-top: 40px;
+      padding-bottom: 50px;
+
+      .item img {
+        margin: 0 auto;
+      }
+    }
+
+    .carousel-indicators {
+      bottom: 0;
+
+      li {
+        background-color: #a5a5a5;
+        border: none;
+        width: 14px;
+        height: 14px;
+
+        &.active {
+          background: url("../images/carousel-active.jpg");
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
   
   h2 {
     text-transform: uppercase;
@@ -504,4 +553,16 @@ body {
     width: auto;
     max-width: 1170px; 
   }
+}
+
+.effect{
+  -webkit-animation-name: animGenie;
+  -webkit-animation-duration: 2s;
+}
+
+@-webkit-keyframes animGenie {
+  0% { opacity:0; -webkit-transform: translate3d(0,calc(200% + 30px),0) scale3d(0,1,1); -webkit-animation-timing-function: ease-in; }
+  40% { opacity:0.5; -webkit-transform: translate3d(0,0,0) scale3d(0.02,1.1,1); -webkit-animation-timing-function: ease-out; }
+  70% { opacity:0.6; -webkit-transform: translate3d(0,-40px,0) scale3d(0.8,1.1,1); }
+  100% { opacity:1; -webkit-transform: translate3d(0,0,0) scale3d(1,1,1); }
 }
